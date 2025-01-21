@@ -1,6 +1,6 @@
-import logo from "./logo.svg";
+import React, { useState } from "react";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import "./App.css";
-import { useState } from "react";
 import data from "./data/house-data";
 import Product from "./component/Product";
 
@@ -13,6 +13,8 @@ function App() {
     updateProduct[index].like += 1;
     setProduct(updateProduct);
   };
+  let navigate = useNavigate();
+
 
   return (
     <div className="App">
